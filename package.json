@@ -1,0 +1,34 @@
+{
+  "name": "trackp",
+  "version": "1.0.0",
+  "description": "Lightweight project management tool with React frontend and Go backend",
+  "scripts": {
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && go mod tidy",
+    "install:all": "npm run install:frontend && npm run install:backend",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && go run main.go",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && go build -o trackp-server main.go",
+    "build:all": "npm run build:frontend && npm run build:backend",
+    "start": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "test:frontend": "cd frontend && npm test"
+  },
+  "keywords": [
+    "project-management",
+    "kanban",
+    "react",
+    "golang",
+    "postgresql",
+    "task-tracking"
+  ],
+  "author": "TrackP Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
