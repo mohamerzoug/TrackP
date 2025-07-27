@@ -205,24 +205,6 @@ TrackP includes VS Code tasks for easy development:
 
 This will start both backend and frontend servers simultaneously.
 
-## 🐳 Docker Support (Coming Soon)
-
-```dockerfile
-# Future docker-compose.yml
-version: '3.8'
-services:
-  frontend:
-    build: ./frontend
-    ports: ["3000:3000"]
-  backend:
-    build: ./backend
-    ports: ["8080:8080"]
-  database:
-    image: postgres:15
-    environment:
-      POSTGRES_DB: trackp
-```
-
 ## 🚀 Production Deployment
 
 ### Frontend
